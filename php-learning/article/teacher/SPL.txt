@@ -1,0 +1,223 @@
+<textarea kp-markdown>
+
+# 什么是 SPL？
+> 全名 Standard PHP Library
+
+> SPL为PHP5提供了一套标准的接口。 SPL的目的是为PHP提供一些有效的数据访问接口和类。
+
+# SPL 有些什么?
+> * 数据结构
+> * 迭代器
+> * 接口
+> * 异常
+> * SPL 函数
+> * 文件处理
+> * 各种类及接口
+
+# SPL 接口
+> Countable <p>对象实现了countable接口时，对该对象使用count函数时，不会在报错，并且调用对象里的count()方法</p>
+> OuterIterator <p>通过OuterIterator::getInnerIterator()接口函数获取内部的迭代器</p>
+> RecursiveIterator <p>递归迭代器接口，通过RecursiveIterator::hasChildren()和 RecursiveIterator::getChildren()两个函数实现递归遍历子元素。</p>
+> SeekableIterator<p>通过SeekableIterator::seek跳转到迭代器中的任何一点上，而不用迭代访问所有这一点之前的元素</p>
+
+# SPL 函数
+> class\_implements
+> <p>返回指定的类实现的所有接口。</p>
+
+> class\_parents
+> <p>返回指定类的父类。</p>
+
+> class\_uses
+> <p>Return the traits used by the given class</p>
+
+> iterator\_apply
+> <p>为迭代器中每个元素调用一个用户自定义函数</p>
+
+> iterator\_count
+> <p>计算迭代器中元素的个数</p>
+
+> iterator\_to\_array
+> <p>将迭代器中的元素拷贝到数组</p>
+
+> spl\_autoload\_call
+> <p>尝试调用所有已注册的__autoload()函数来装载请求类</p>
+
+> spl\_autoload\_extensions
+> <p>注册并返回spl_autoload函数使用的默认文件扩展名。</p>
+
+> spl\_autoload\_functions
+> <p>返回所有已注册的__autoload()函数。</p>
+
+> spl\_autoload\_register
+> <p>注册__autoload()函数</p>
+
+> spl\_autoload\_unregister
+> <p>注销已注册的__autoload()函数</p>
+
+> spl\_autoload
+> <p>__autoload()函数的默认实现</p>
+
+> spl\_classes
+> <p>返回所有可用的SPL类</p>
+
+> spl\_object\_hash
+> <p>返回指定对象的hash id</p>
+
+# SPL 异常
+> LogicException
+> <p>逻辑错误异常类，相关代码创作人可以避免的，这类Exception都是应该被直接修复掉的</p>
+> > BadFunctionCallException
+> > <p>不合法的函数被调用产生的异常类</p>
+> > > BadMethodCallException
+> > > <p>不合法的方法被调用产生的异常类</p>
+
+> > DomainException
+> > <p>表示一个值不在有效域中的异常</p>
+> > InvalidArgumentException
+> > <p>表示传递了无效的参数产生的异常</p>
+> > LengthException
+> > <p>长度不在期望范围之内应该抛出此异常</p>
+> > OutOfRangeException
+> > <p>表示请求检索超越了数组等容器最大长度的异常(你能非常确定某个数组有哪些key)</p>
+
+> RuntimeException
+> <p>运行时错误异常类，往往是用户造成，是代码调用者无法通过写更多逻辑代码来避免的</p>
+> > OutOfBoundsException
+> > <p>表示请求检索超越了数组等容器最大长度的异常(你也不知道某个数组有哪些key)</p>
+> > OverflowException
+> > <p>表示算法/缓存溢出异常，一个容器已经满了，调用者还往里塞东西，就抛出此异常</p>
+> > RangeException
+> > <p>运行期间的范围异常</p>
+> > UnderflowException
+> > <p>在一个空容器中进行无效操作时抛出的异常，比如移除元素。</p>
+> > UnexpectedValueException
+> > <p>运行期间用来处理所提供的值与所有预定义的值集都不匹配的情况的异常</p>
+
+# SPL 文件处理
+> SplFileInfo
+> <p>文件或者目录的属性提供面向对象的访问功能</p>
+
+> SplFileObject
+> <p>读取和操作文件数据</p>
+
+> SplTempFileObject
+> <p>通过内存创建一个临时的存储数据空间</p>
+
+
+
+# SPL 其他类和接口
+> ArrayObject
+> <p>允许对象象数组那样工作</p>
+> <p>ArrayObject::STD_PROP_LIST 迭代器的属性只能通过foreach var_dump访问到</p>
+> <p>ArrayObject::ARRAY_AS_PROPS 迭代器的属性在外部可以直接访问</p>
+> SplObserver 、SplSubject
+> <p>观察者模式的实现</p>
+
+# SPL 数据结构
+> SplDoublyLinkedList <p>实现双链表数据结构</p>
+
+> SplStack <p>实现栈数据结构</p>
+
+> SplQueue <p>实现队列数据结构</p>
+
+> SplHeap <p>实现堆数据结构</p>
+
+> > SplMaxHeap <p>实现最大堆数据结构</p>
+
+> > SplMinHeap <p>实现最小堆数据结构</p>
+
+> SplPriorityQueue <p>实现具有优先级数据结构,遍历堆时会从堆中删除值。</p>
+
+> SplFixedArray <p>实现有限大小数组数据结构，仅允许范围内作为索引的整数，它允许较快的数组实现。</p>
+
+> SplObjectStorage <p>对象存储映射表，应用于需要唯一标识多个对象的存储场景</p>
+
+
+# SPL 迭代器
+> ArrayIterator
+>   <p>将数组和对象转换为迭代器对象,只支持一维数组</p>
+>   <p>ArrayIterator::STD\_PROP\_LIST 迭代器的属性只能通过foreach var_dump访问到</p>
+>   <p>ArrayIterator::ARRAY\_AS\_PROPS 迭代器的属性在外部可以直接访问</p>
+> > RecursiveArrayIterator
+> >     <p>RecursiveArrayIterator 类似于 ArrayIterator 提供了RecursiveArrayIterator::hasChildren 判断是否有子迭代器，RecursiveArrayIterator::getChildren获取子迭代器，可以将数组或对象类型通过getChildren转换为Iterator对象</p>
+> >     <p>RecursiveArrayIterator::CHILD_ARRAYS_ONLY</p>
+
+> EmptyIterator
+>   <p>它不执行任何操作，当需要返回Iterator时，数据又不存在，可以使用EmptyIterator返回。</p>
+
+> IteratorIterator
+>   <p>是一种通用类型的迭代器，所有实现了Traversable接口的类都可以被它迭代遍历访问，比如PDOStatement对象</p>
+> > AppendIterator
+> >     <p>迭代器允许按插入顺序迭代访问几个不同的迭代器，可以将来自于多个数据源的数据聚合到一个迭代器中时</p>
+
+> > CachingIterator
+> >     <p>用来执行提前判断下一个元素的迭代操作，可以用于确定当前元素是否为最后一个元素</p>
+> >     <p>CachingIterator::CALL\_TOSTRING 当echo CachingIterator调用toString方法</p>
+> >     <p>CachingIterator::TOSTRING\_USE\_KEY toString时使用数组的键值</p>
+> >     <p>CachingIterator::TOSTRING\_USE\_KEY toString时使用数组的值</p>
+> >     <p>CachingIterator::TOSTRING\_USE\_INNER 调用innerIterator 的 toString方法</p>
+> >     <p>CachingIterator::FULL\_CACHE 缓存所有的数据 可以通过getCache()得到</p>
+> >     <p>CachingIterator::CATCH\_GET\_CHILD 给RecursiveCachingIterator使用</p>
+> > >   RecursiveCachingIterator
+> > >       <p>类似于CachingIterator 可处理多维迭代器</p>
+
+> > FilterIterator
+> >     <p>这是一个抽象类，它实现了OuterIterator接口。它包装一个已有的迭代器类，通过抽象方法accept()过滤掉不需要的内容，形成一个新的迭代器。</p>
+> > >   CallbackFilterIterator
+> > >       <p>通过回调函数来实现FilterIterator 的 accept()方法</p>
+> > > >    RecursiveCallbackFilterIterator
+> > > >    <p>类似于CallbackFilterIterator 可处理多维迭代器</p>
+
+> > >   RecursiveFilterIterator
+> > >       <p>类似于FilterIterator 可处理多维迭代器</p>
+> > > >  ParentIterator
+> > > >         <p>可以过滤掉来自于RecursiveIterator迭代器的非父元素，只找出子节点的键值。通俗来说，就是去枝留叶。</p>
+
+> > >   RegexIterator
+> > >   <p>使用正则表达式模式匹配和修改迭代器中的元素</p>
+> > >   <p>RegexIterator::ALL_MATCHES 匹配所有模式</p>
+> > >   <p>RegexIterator::GET_MATCH 匹配单个文字模式</p>
+> > >   <p>RegexIterator::MATCH 匹配单个字</p>
+> > >   <p>RegexIterator::REPLACE 替换模式</p>
+> > >   <p>RegexIterator::SPLIT 分解模式</p>
+> > >   <p>RegexIterator::USE_KEY 匹配键值</p>
+> > > >  RecursiveRegexIterator
+> > > >         <p>类似与RegexIterator 可处理多维迭代器</p>
+
+> > LimitIterator
+> >     <p>返回给定数量的结果以及从集合中取出结果的起始索引点</p>
+
+> > InfiniteIterator
+> >     <p>迭代器用来持续地循环访问数据。当迭代操作找到最后一个元素时，迭代器会回卷，并再次从第一个元素开始迭代访问数据。通过LimitIterator在限制循环次数</p>
+
+> > NoRewindIterator
+> >     <p>迭代器可用于不能回滚的集合，或者说是不能多次迭代的集合。当需要在迭代过程中执行一次性操作时，这种迭代器非常有用。</p>
+
+> MultipleIterator
+>   <p>迭代器依次根据每个iterator的元素位置组合成新的数组</p>
+>   <p>MultipleIterator::MIT_NEED_ANY 所有迭代器中的这个迭代位置只要有一个迭代器有数据有就组合</p>
+>   <p>MultipleIterator::MIT_NEED_ALL 所有迭代器中的这个迭代位置上必须都有数据才组合</p>
+>   <p>MultipleIterator::MIT_KEYS_NUMERIC 生成的数组使用数字索引</p>
+>   <p>MultipleIterator::MIT_KEYS_ASSOC 生成的数组使用在MultipleIterator::attachIterator时候设置的$infos</p>
+
+> RecursiveIteratorIterator
+>   <p>类似于IteratorIterator，可以递归展开所有子迭代器</p>
+>   <p>RecursiveIteratorIterator::LEAVES_ONLY 是去枝留叶，跳过空节点，只递归取实值</p>
+>   <p>RecursiveIteratorIterator::SELF_FIRST 各项都包含，顺序是先父后子</p>
+>   <p>RecursiveIteratorIterator::CHILD_FIRST各项都包含，顺序是先子后父 </p>
+>   <p>RecursiveIteratorIterator::CATCH_GET_CHILD </p>
+
+> > RecursiveTreeIterator
+> >     <p>显示一个树形结构</p>
+
+> DirectoryIterator
+>   <p>迭代器提供了访问某个目录内容列表的功能，每个元素都是SplFileInfo类的实例</p>
+> > FilesystemIterator
+> >     <p>文件系统迭代器，类似于目录迭代器</p>
+> > > GlobIterator
+> > >   <p>带匹配模式的文件遍历器</p>
+
+> > > RecursiveDirectoryIterator
+> > >   <p>递归目录文件遍历器，可实现列出所有目录层次结构，而不是只操作一个目录</p>
+
+</textarea>

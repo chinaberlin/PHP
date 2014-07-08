@@ -1,0 +1,25 @@
+<a href="{{:U('add')}}" class="btn btn-danger">add</a>
+
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>depth</th>
+        <th>&nbsp;</th>
+    </tr>
+    <foreach name="treeData" item="node">
+        <tr>
+            <td>{{$node.id}}</td>
+            <td>{{:str_repeat('　',$node['depth'] - 1)}}{{$node.name}}</td>
+            <td>{{$node.depth}}</td>
+            <td><a href="{{:U('edit',['id'=>$node['id']])}}" class="btn btn-primary">edit</a></td>
+        </tr>
+    </foreach>
+</table>
+
+
+<select>
+    <foreach name="treeData" item="node">
+        <option value="">{{:str_repeat('　',$node['depth'])}}{{$node.name}}</option>
+    </foreach>
+</select>

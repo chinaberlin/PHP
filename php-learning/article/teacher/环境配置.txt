@@ -1,0 +1,45 @@
+<textarea kp-markdown>
+
+# 安装 xampp
+> [官网](http://www.apachefriends.org/zh_cn/index.html)
+
+# 安装 Zend Studio
+> [官网](http://www.zend.com/en/products/studio/)
+
+# 破解 Zend Studio
+> 将 com.zend.php.core_10.0.0.201302111609.jar 复制到plugin目录下，打开ZendStudio，输入以下注册码：
+
+>     15BD3D9635621E3AD4AE0F243B9E76CCFF6383B0E254EF646FD47B1424832332148D73E944AC95FC2A22EAF9965FE00D0BBACAD80E4B73BCFD40AADBEBD606EA4C33A74AEBB140CFB189E545E351774B7A020CDBE4FD159CDFF00F3C6A08C6AAC1A4F811EDDCF59CAFD09D46C849CB780BF6EF5983D3AFC372FC2021714E6B0B
+
+# 配置 Zend Studio
+> 切换工作台，使创建的项目默认指向工作环境
+
+>![](./demo/环境配置/zs-1.png)
+>![](./demo/环境配置/zs-2.png)
+
+> 1.修改代码提示速度
+
+>![](./demo/环境配置/zs-3.png)
+
+> 2.修改字体
+
+>![](./demo/环境配置/zs-4.png)
+
+> 3.定义 代码模版
+
+>![](./demo/环境配置/zs-5.png)
+
+>     <?php
+     /**
+      * Kittencup (http://www.kittencup.com/)
+      *
+      * @date ${date} ${time}
+      * @copyright Copyright (c) 2014-2015 Kittencup. (http://www.kittencup.com)
+      * @license   http://kittencup.com
+      */
+     ${cursor}
+
+
+
+
+</textarea>

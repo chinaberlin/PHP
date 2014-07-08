@@ -1,0 +1,75 @@
+<textarea kp-markdown>
+
+# 什么是PHP-FIG?
+> 是一个组织 从2000年开始，由几个框架的开发者组成，主要原因是希望PHP能够哦与个最低程度的共同编码风格可以依循，以避免发展各家的写法
+
+> * PSR-0 制定了 autoloader 的编写规范
+> * PSR-1 制定了代码基本元素的标准，确保共享PHP代码具有较高程度的技术共性
+> * PSR-2 制定了 PSR-1 基本代码规范的继承与扩展
+> * PSR-3 制定了日志类库的通用接口规范
+
+
+
+
+# PSR-0
+
+> * 一个标准的 命名空间(namespace) 以及 类(class) 的定义必须符合以下结构
+`\<Vendor Name>\(<Namespace>\)*<Class Name>`；
+> * 其中"Vendor Name"为每个命名空间都必须隶属的一个顶级的组织名称；
+> * 需要的话，每个命名空间下面可以拥有多个子命名空间；
+> * 当从文件系统载入源文件时，每个命名空间之间的分隔符都要转换成文件夹分隔符 (`DIRECTORY_SEPARATOR`) ；
+> * `_` 字符在命名空间中是无实际意义的，所以从文件系统载入源文件时，类名称中的每个 `_` 字符也都要转换成文件夹分隔符 (`DIRECTORY_SEPARATOR`) ；
+> * 从文件系统载入的标准的命名空间以及类文件，都需要以 `.php` 为文件后缀；
+> * 组织名称、命名空间 以及 类 的名称可以由任意大小写字母组成。
+
+### 范例
+
+> * `\Doctrine\Common\IsolatedClassLoader` => `/path/to/project/lib/vendor/Doctrine/Common/IsolatedClassLoader.php`
+> * `\Symfony\Core\Request` => `/path/to/project/lib/vendor/Symfony/Core/Request.php`
+> * `\Zend\Acl` => `/path/to/project/lib/vendor/Zend/Acl.php`
+> * `\Zend\Mail\Message` => `/path/to/project/lib/vendor/Zend/Mail/Message.php`
+
+
+### 命名空间以及类名称中的下划线
+
+> * `\namespace\package\Class_Name` => `/path/to/project/lib/vendor/namespace/package/Class/Name.php`
+> * `\namespace\package_name\Class_Name` => `/path/to/project/lib/vendor/namespace/package_name/Class/Name.php`
+
+# PSR-1
+
+> * PHP代码文件 必须 以 `<?php` 或 `<?=` 标签开始；
+> * PHP代码文件 必须 以 不带BOM的 UTF-8 编码；
+> * PHP代码中 应该 只定义类、函数、常量等声明，或其他会产生 从属效应 的操作（如：生成文件输出以及修改.ini配置文件等），并且二者只能选其一；
+> * 命名空间以及类 必须 符合 PSR-0 规范；
+> * 类的命名 必须 遵循 `StudlyCaps` 大写开头的驼峰命名规范；
+> * 类中的常量 必须  所有字母大写，单词由下划线分隔；
+> * 方法名称 必须 符合 `camelCase` 式的小写开头驼峰命名规范。
+
+# PSR-2
+
+> * 代码 必须 遵循 [PSR-1][] 。
+> * 代码 必须 使用4个空格符而不是 tab键 进行缩进。
+> * 每行的字符数  应该 保持在80个之内， 理论上 一定 不可多于120个， 但 不应 强做限制。
+> * 每个 `namespace` 命名空间声明语句和 `use` 声明语句块后面，必须 插入一个空白行。
+> * 类的开始花括号 必须 写在函数声明后自成一行，结束花括号也 必须 写在函数主体后自成一行。
+> * 方法的开始花括号 必须 写在函数声明后自成一行，结束花括号也 必须 写在函数主题后自成一行。
+> * 类的属性和方法 必须 声明其作用域（private、protected 以及 public）；
+> * `abstract` 以及 `final`  必须 是声明在作用域之前；
+> * `static` 必须 是声明在作用域之后。
+> * 控制结构的名称后 必须 要有一个空格符，而编写方法或调用函数时则 一定不能 有。
+> * 控制结构的开始花括号 必须 写在声明的同一行，而结束花括号 必须 写在主体后自成一行。
+> * 控制结构的左括号后和右括号前， 不应 有空格符。
+
+# PSR-3
+
+> * `LoggerInterface` 接口对外定义了八个方法，分别用来记录八个等级的日志：debug、 info、 notice、 warning、 error、 critical、 alert 、emergency 。
+> * 第九个方法 —— `log`，其第一个参数为记录的等级。使用一个预先定义的等级常量作为参数来调用此方法，必须 与直接调用以上八个方法具有相同的效果。如果传入的等级常量参数没有预先定义，则 必须 抛出 `Psr\Log\InvalidArgumentException` 类型的异常。在不确定的情况下，使用者 不该 使用未支持的等级常量来调用此方法。
+> * 每个记录函数都接受一个上下文数组参数，用来承载字符串类型无法表示的信息。它 可以 装载任何信息，所以实现者 必须 确保能正确处理其装载的信息，对于其装载的数据，一定不能 抛出异常，或产生PHP出错、警告或提醒信息（error, warning or notice）。
+> * `Psr\Log\AbstractLogger` 类使得只需继承它和实现其中的 `log` 方法，就能够很轻易地实现 `LoggerInterface` 接口。而另外八个方法就能够把记录信息和上下文信息传给它。
+> * `Psr\Log\LoggerTrait`  也只需实现其中的 `log` 方法。需要特别注意的是，在traits可复用类还不能实现接口前，还需要  `implement LoggerInterface`。
+> * 接口中也提供了  `Psr\Log\NullLogger` ，当记录信息为空时，它 可以 为使用者 提供一个备用的“黑洞”—— 用来记录上下文信息。
+> * `Psr\Log\LoggerAwareInterface` 接口仅包括一个 `setLogger(LoggerInterface $logger)` 方法，框架可以使用它实现自动连接任意的日志记录实例。
+> * `Psr\Log\LoggerAwareTrait` trait可复用类可以用在任何的类里面，只需通过它提供的 `$this->logger`，就可以轻松地实现等同的接口。
+> * `Psr\Log\LogLevel` 类负责装载八个记录等级常量。
+
+</textarea>

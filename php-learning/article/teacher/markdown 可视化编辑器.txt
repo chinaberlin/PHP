@@ -1,0 +1,9 @@
+<div class="kp-edit">
+    <div class="kp-edit-left">
+        <textarea class="kp-edit-left-edit" ng-bind="editMarkdown" ng-keyup="transformMarkdown($event.target)"></textarea>
+    </div>
+
+    <div class="kp-edit-right" ng-bind-html="editPreviewHtml">
+
+    </div>
+</div>

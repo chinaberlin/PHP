@@ -1,0 +1,155 @@
+<textarea kp-markdown>
+
+#PHP 标记
+> 当解析一个文件时，PHP 会寻找起始和结束标记，
+
+>     <?php  ?>
+
+> 允许使用短标记，通过激活 php.ini 中的 short_open_tag
+
+>     <?  ?>
+
+> 如果文件内容是纯 PHP 代码，可以在文件末尾删除 PHP 结束标记
+
+# 指令分隔符
+> PHP 需要在每个语句后用分号结束指令
+
+# 注释
+>     <?php
+          // This is a one-line c++ style comment
+          echo "This is a test";
+          /*
+             This is a multi line comment
+             yet another line of comment
+          */
+          echo "This is yet another test";
+          # This is a one-line shell-style comment
+          echo 'One Final Test';
+      ?>
+
+# 数据类型
+### (一) 标量类型(基本类型)
+> 1. boolean（布尔型）
+> 2. integer（整型）
+> 3. float（浮点型，也称作 double)
+> 4. string（字符串）
+
+### (二) 两种复合类型(引用类型)
+> 1. array（数组）
+> 2. object（对象）
+
+### (三) 特殊类型
+> 1. resource（资源）
+> 2. NULL（无类型）
+
+### (四) 伪类型
+> 1. mixed（混合类型）
+> 2. number（数字类型）
+> 3. callback（回调类型）
+
+# 变量
+
+> PHP 中的变量用一个美元符号后面跟变量名来表示。变量名是区分大小写的
+
+> 变量名必须由字母或者下划线开头，后面跟上任意数量的字母，数字，或者下划线
+
+> 变量默认总是传值赋值，可以通过 & 产生引用赋值
+
+# 预定义变量
+> * $GLOBALS — 引用全局作用域中可用的全部变量
+> * $_SERVER — 服务器和执行环境信息
+> * $_GET — HTTP GET 变量
+> * $_POST — HTTP POST 变量
+> * $_FILES — HTTP 文件上传变量
+> * $_REQUEST — HTTP Request 变量
+> * $_SESSION — Session 变量
+> * $_ENV — 环境变量
+> * $_COOKIE — HTTP Cookies
+> * $php_errormsg — 前一个错误信息
+> * $HTTP_RAW_POST_DATA — 原生POST数据
+> * $http_response_header — HTTP 响应头
+> * $argc — 传递给脚本的参数数目
+> * $argv — 传递给脚本的参数数组
+
+# 可变变量
+> 一个变量的变量名可以动态的设置和使用
+
+
+# 常量
+> 通过define(),在php5.3之后也可以通过const关键字 来定义常量
+
+> 一个常量一旦被定义，就不能再改变或者取消定义
+
+> 常量可以不用理会变量的作用域而在任何地方定义和访问
+
+> 常量的值只能是标量
+
+> [demo001](./demo/基础语法/demo001.php)
+
+# 魔术常量
+> * \_\_LINE\_\_
+> * \_\_FILE\_\_
+> * \_\_DIR\_\_
+> * \_\_FUNCTION\_\_
+> * \_\_CLASS\_\_
+> * \_\_TRAIT\_\_
+> * \_\_METHOD\_\_
+> * \_\_NAMESPACE\_\_
+
+# 运算符
+> * 算术运算符
+> * 赋值运算符
+> * 比较运算符
+> * 错误控制运算符
+> * 递增／递减运算符
+> * 逻辑运算符
+> * 字符串运算符
+> * 数组运算符
+> * 类型运算符
+
+> [demo002](./demo/基础语法/demo001.php)
+
+# 流程控制
+> * if
+> * else
+> * elseif/else if
+> * while
+> * do-while
+> * for
+> * foreach
+> * break
+> * continue
+> * switch
+> * return
+> * require
+> * include
+> * require_once
+> * include_once
+> * goto
+
+> [demo003](./demo/基础语法/demo003.php)
+
+# 函数
+> * 通过function自定义函数
+> * 函数的参数:通过参数列表可以传递信息到函数，即以逗号作为分隔符的表达式列表
+> * 返回值: 值通过使用可选的返回语句返回。可以返回包括数组和对象的任意类型。返回语句会立即中止函数的运行，并且将控制权交回调用该函数的代码行
+> * 可变函数:一个变量名后有圆括号，PHP 将寻找与变量的值同名的函数，并且尝试执行它
+
+> [demo004](./demo/基础语法/demo004.php)
+
+# 内置函数
+> PHP 有很多标准的函数和结构，方便开发者操作数组，字符串，IO等
+
+> PHP 手册的函数定义解析
+
+>![](./demo/基础语法/function_document.png)
+
+> [demo005](./demo/基础语法/demo005.php)
+
+# 匿名函数
+> 匿名函数（Anonymous functions），也叫闭包函数（closures），允许 临时创建一个没有指定名称的函数。
+
+> 经常用作回调函数（callback）的参数。
+
+> [demo006](./demo/基础语法/demo006.php)
+</textarea>

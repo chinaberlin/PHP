@@ -1,0 +1,23 @@
+<a href="{{:U('add')}}" class="btn btn-danger">{{:L('add')}}</a>
+<table class="table">
+    <tr>
+        <th>{{:L('id')}}</th>
+        <th>{{:L('username')}}</th>
+        <th>{{:L('email')}}</th>
+        <th>{{:L('reg_date')}}</th>
+        <th>{{:L('reg_ip')}}</th>
+        <th></th>
+    </tr>
+    <foreach name="users" item="user">
+        <tr>
+            <td>{{$user.id}}</td>
+            <td>{{$user.username}}</td>
+            <td>{{$user.email}}</td>
+            <td>{{$user.reg_date}}</td>
+            <td>{{$user.reg_ip}}</td>
+            <td> <a href="{{:U('edit',['id'=>$user['id']])}}" class="btn btn-danger">{{:L('edit')}}</a></td>
+        </tr>
+    </foreach>
+</table>
+{{$page}}
+
