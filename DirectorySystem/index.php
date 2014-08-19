@@ -9,7 +9,11 @@ include 'Kp/Autoloader.php';
     <meta charset="UTF-8">
     <?php
     echo Head::style(['Vendor/bootstrap3/dist/css/bootstrap.min', 'Public/index']);
+<<<<<<< HEAD
     echo Head::script(['Vendor/jquery/jquery.2.1.0.min','Vendor/bootstrap3/dist/js/bootstrap.min','Public/index']);
+=======
+    echo Head::script(['Vendor/jquery/jquery.2.1.0.min','Public/index']);
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
     ?>
 </head>
 <body>
@@ -27,6 +31,7 @@ include 'Kp/Autoloader.php';
     ?>
 </div>
 
+<<<<<<< HEAD
 
 
 <!-- Modal -->
@@ -49,5 +54,7 @@ include 'Kp/Autoloader.php';
 </div><!-- /.modal -->
 
 
+=======
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
 </body>
 </html>

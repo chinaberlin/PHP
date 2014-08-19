@@ -10,7 +10,11 @@ namespace Kp;
 class Config
 {
     protected static $config = [
+<<<<<<< HEAD
         'path' => 'C:/xampp/htdocs',
+=======
+        'path' => 'D:/',
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
         'urlPathKey'=>'path',
         'pageShow'=>10,
         'urlPageKey'=>'page',

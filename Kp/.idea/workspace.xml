@@ -22,7 +22,90 @@
     <favorites_list name="Kp" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf />
+=======
+    <leaf>
+      <file leaf-file-name="InvalidArgumentException.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Kp/EventManager/Exception/InvalidArgumentException.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="30" selection-start="132" selection-end="156" vertical-scroll-proportion="-7.857143" vertical-offset="0" max-vertical-offset="594">
+              <folding>
+                <element signature="e#6#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventManagerInterface.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Kp/EventManager/EventManagerInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="39" selection-start="267" selection-end="280" vertical-scroll-proportion="-1.6428572" vertical-offset="525" max-vertical-offset="2508">
+              <folding>
+                <element signature="e#6#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init_autoloader.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/init_autoloader.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="3" selection-start="86" selection-end="86" vertical-scroll-proportion="-4.714286" vertical-offset="0" max-vertical-offset="891">
+              <folding>
+                <element signature="e#6#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="em.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/em.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="23" selection-start="476" selection-end="476" vertical-scroll-proportion="-6.547619" vertical-offset="715" max-vertical-offset="1815">
+              <folding>
+                <element signature="e#6#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventManager.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Kp/EventManager/EventManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="73" column="36" selection-start="1844" selection-end="1853" vertical-scroll-proportion="0.65370595" vertical-offset="1871" max-vertical-offset="3630">
+              <folding>
+                <element signature="e#6#86#0" expanded="true" />
+                <element signature="e#116#171#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Event.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Kp/EventManager/Event.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="29" selection-start="567" selection-end="576" vertical-scroll-proportion="-8.642858" vertical-offset="792" max-vertical-offset="2739">
+              <folding>
+                <element signature="e#6#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SplPriorityQueue.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Kp/EventManager/SplPriorityQueue.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="22" selection-start="121" selection-end="137" vertical-scroll-proportion="-6.547619" vertical-offset="22" max-vertical-offset="858">
+              <folding>
+                <element signature="e#6#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -32,18 +115,31 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/Kp/EventManager/ResponseCollection.php" />
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
         <option value="$PROJECT_DIR$/init_autoloader.php" />
         <option value="$PROJECT_DIR$/Kp/EventManager/EventManagerInterface.php" />
         <option value="$PROJECT_DIR$/Kp/EventManager/Exception/InvaliArgumentException.php" />
         <option value="$PROJECT_DIR$/Kp/EventManager/Exception/ExceptionInterface.php" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/Kp/EventManager/SplPriorityQueue.php" />
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
         <option value="$PROJECT_DIR$/../zf2/init_autoloader.php" />
         <option value="$PROJECT_DIR$/Kp/EventManager/Exception/RuntimeException.php" />
         <option value="$PROJECT_DIR$/Kp/EventManager/EventInterface.php" />
         <option value="$PROJECT_DIR$/Kp/EventManager/Event.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/em.php" />
         <option value="$PROJECT_DIR$/Kp/EventManager/SplPriorityQueue.php" />
         <option value="$PROJECT_DIR$/Kp/EventManager/EventManager.php" />
         <option value="$PROJECT_DIR$/Kp/EventManager/ResponseCollection.php" />
+=======
+        <option value="$PROJECT_DIR$/Kp/EventManager/EventManager.php" />
+        <option value="$PROJECT_DIR$/em.php" />
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
       </list>
     </option>
   </component>
@@ -175,6 +271,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+<<<<<<< HEAD
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -188,6 +285,21 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973376" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3398058" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -218,5 +330,152 @@
       <option name="time" value="9" />
     </breakpoint-manager>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="editorHistoryManager">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/SPL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1793" column="52" selection-start="56532" selection-end="56543" vertical-scroll-proportion="0.3494687" vertical-offset="58873" max-vertical-offset="68244">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kp/EventManager/ResponseCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="25" selection-start="113" selection-end="113" vertical-scroll-proportion="0.30697674" vertical-offset="0" max-vertical-offset="860">
+          <folding>
+            <element signature="e#6#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="10" selection-start="305" selection-end="305" vertical-scroll-proportion="0.34911242" vertical-offset="200" max-vertical-offset="11484">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/SPL_c1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1502" column="49" selection-start="53106" selection-end="53123" vertical-scroll-proportion="0.43013367" vertical-offset="49212" max-vertical-offset="74547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kp/EventManager/Exception/ExceptionInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="0.43421054" vertical-offset="0" max-vertical-offset="836">
+          <folding>
+            <element signature="e#6#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zf2/init_autoloader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="1" selection-start="155" selection-end="155" vertical-scroll-proportion="0.19736843" vertical-offset="0" max-vertical-offset="836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kp/EventManager/SplPriorityQueue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="22" selection-start="121" selection-end="137" vertical-scroll-proportion="-6.547619" vertical-offset="22" max-vertical-offset="858">
+          <folding>
+            <element signature="e#6#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init_autoloader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="3" selection-start="86" selection-end="86" vertical-scroll-proportion="-4.714286" vertical-offset="0" max-vertical-offset="891">
+          <folding>
+            <element signature="e#6#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kp/EventManager/EventManagerInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="39" selection-start="267" selection-end="280" vertical-scroll-proportion="-1.6428572" vertical-offset="525" max-vertical-offset="2508">
+          <folding>
+            <element signature="e#6#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kp/EventManager/Exception/InvalidArgumentException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="30" selection-start="132" selection-end="156" vertical-scroll-proportion="-7.857143" vertical-offset="0" max-vertical-offset="594">
+          <folding>
+            <element signature="e#6#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kp/EventManager/Exception/RuntimeException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="1" selection-start="205" selection-end="205" vertical-scroll-proportion="0.40097207" vertical-offset="0" max-vertical-offset="823">
+          <folding>
+            <element signature="e#6#86#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_d.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="297" column="8" selection-start="7581" selection-end="7610" vertical-scroll-proportion="0.34993926" vertical-offset="9513" max-vertical-offset="11979">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kp/EventManager/EventInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="18" selection-start="637" selection-end="637" vertical-scroll-proportion="0.23086125" vertical-offset="1226" max-vertical-offset="3003">
+          <folding>
+            <element signature="e#6#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kp/EventManager/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="29" selection-start="567" selection-end="576" vertical-scroll-proportion="-8.642858" vertical-offset="792" max-vertical-offset="2739">
+          <folding>
+            <element signature="e#6#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="46" selection-start="1213" selection-end="1223" vertical-scroll-proportion="0.8311057" vertical-offset="504" max-vertical-offset="35904">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/em.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="23" selection-start="476" selection-end="476" vertical-scroll-proportion="-6.547619" vertical-offset="715" max-vertical-offset="1815">
+          <folding>
+            <element signature="e#6#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kp/EventManager/EventManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="36" selection-start="1844" selection-end="1853" vertical-scroll-proportion="0.65370595" vertical-offset="1871" max-vertical-offset="3630">
+          <folding>
+            <element signature="e#6#86#0" expanded="true" />
+            <element signature="e#116#171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
 </project>
 

@@ -70,6 +70,10 @@ class EventManager implements EventManagerInterface
         $e->setName($event)->setTarget($target)->setParams($args);
 
         foreach ($listeners as $listener) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
             call_user_func($listener, $e);
         }
     }

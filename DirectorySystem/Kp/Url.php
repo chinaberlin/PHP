@@ -15,10 +15,13 @@ class Url
 
         $allQuery = Request::getQuery();
 
+<<<<<<< HEAD
         if($fileName !== null){
             $allQuery = [];
         }
 
+=======
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
         $newQuery = array_merge($allQuery, $query);
 
         $queryString = http_build_query($newQuery);
@@ -31,7 +34,11 @@ class Url
             array_pop($scriptArr);
             $scriptArr[] = $fileName;
             $scriptName = '/' . implode('/', $scriptArr);
+<<<<<<< HEAD
 
+=======
+            $queryString = '';
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
         }
         return Request::getServer('REQUEST_SCHEME') . '://' . Request::getServer('HTTP_HOST') . $scriptName . '?' . $queryString;
     }

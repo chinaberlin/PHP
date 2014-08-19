@@ -1,0 +1,20 @@
+<a href="<?=$this->url('album',['action'=>'add']);?>" class="btn btn-info">Add</a>
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>artist</th>
+        <th>title</th>
+        <th>#</th>
+    </tr>
+    <?php foreach($this->albumResultset as $album):?>
+        <tr>
+            <td><?=$album->id;?></td>
+            <td><?=$album->artist;?></td>
+            <td><?=$album->title;?></td>
+            <td>
+                <a href="<?=$this->url('album',['id'=>$album->id,'action'=>'delete']);?>" class="btn-danger btn">DELETE</a>
+                <a href="<?=$this->url('album',['id'=>$album->id,'action'=>'edit']);?>" class="btn-primary btn">EDIT</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>

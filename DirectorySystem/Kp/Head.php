@@ -10,7 +10,11 @@ namespace Kp;
 class Head
 {
     protected static $scriptTemplate = '<script type="text/javascript" src="%s.js"></script>';
+<<<<<<< HEAD
         protected static $styleTemplate = '<link rel="stylesheet" href="%s.css"/>';
+=======
+    protected static $styleTemplate = '<link rel="stylesheet" href="%s.css"/>';
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
 
     public static function script($path)
     {

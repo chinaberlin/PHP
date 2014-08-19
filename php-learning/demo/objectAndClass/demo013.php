@@ -18,7 +18,11 @@ interface setName
 
 abstract class Person implements getName, setName
 {
+<<<<<<< HEAD
     abstract public function xxx();
+=======
+    abstract public function xxx();+-
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
 
     public function say()
     {

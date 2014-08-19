@@ -9,6 +9,7 @@ namespace Kp;
 
 include 'Kp/Autoloader.php';
 
+<<<<<<< HEAD
 
 $action = Request::getQuery('action');
 
@@ -33,3 +34,12 @@ if ($action === 'delete') {
 
 
 
+=======
+$path = explode('||', Request::getQuery('path'));
+
+foreach ($path as $p) {
+    unlink($p);
+}
+
+header('Location:' . Url::create([], 'index.php'));
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b

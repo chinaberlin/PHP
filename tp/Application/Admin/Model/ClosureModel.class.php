@@ -28,6 +28,7 @@ class ClosureModel extends Model
 
     }
 
+<<<<<<< HEAD
     /**
      * @param $id
      * @param $toId
@@ -61,6 +62,12 @@ class ClosureModel extends Model
         $this->query("DELETE FROM `kp-tree-closure-path` WHERE `p` in({$$parentIds}) and `c` in({$$childIds})");
 
         $this->query("INSERT INTO  `kp-tree-closure-path` (p,c) SELECT p1.p,p2,c FROM `kp-tree-closure-path` as p1 CROSS JOIN `kp-tree-closure-path` as p2 where p1.c = {$toId} and p2.p = {$id}");
+=======
+    public function moveNode($id, $toId)
+    {
+
+
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
     }
 
     public function addNode($toId, $nodeInfo)
@@ -87,13 +94,17 @@ class ClosureModel extends Model
         $node = $this->where(['id' => $id])->find();
 
 
+<<<<<<< HEAD
         return $this->join('`kp-tree-closure-path` as path on path.p = `kp-tree-closure`.id')->where(['c' => $id])->order('depth asc')->select();
 
 
+=======
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
     }
 
     public function deleteNodeById($id)
     {
+<<<<<<< HEAD
         $child = $this->table('kp-tree-closure-path')->field('c')->where(['p' => $id, 'c' => ['neq', $id]])->select();
 
         $ids = [];
@@ -109,11 +120,14 @@ class ClosureModel extends Model
         $this->table('kp-tree-closure-path')->where(['p' => $id, 'c' => $id, '_logic' => 'OR'])->delete();
         $this->where(['id' => $id])->delete();
         echo $this->getLastSql();
+=======
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
 
     }
 
     public function deleteChildNodeById($id, $self = true)
     {
+<<<<<<< HEAD
         $child = $this->table('kp-tree-closure-path')->field('c')->where(['p' => $id])->select();
 
         $ids = [];
@@ -128,5 +142,7 @@ class ClosureModel extends Model
 
         $this->table('kp-tree-closure-path')->where(['p' => ['in', $ids], 'c' => ['in', $ids], '_logic' => 'OR'])->delete();
 
+=======
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
     }
 }

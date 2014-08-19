@@ -40,15 +40,26 @@ $limitIterator = new LimitIterator($filterIterator, $limit, Config::getConfig('p
         <?php foreach ($limitIterator as $dIterator): ?>
             <tr>
                 <td>
+<<<<<<< HEAD
                     <input type="checkbox" data-path="<?=$dIterator->getPath() . DIRECTORY_SEPARATOR .  iconv('gbk', 'utf-8', $dIterator->getFileName());?>"/>
+=======
+                    <input type="checkbox" data-path="<?=$dIterator->getPath() . DIRECTORY_SEPARATOR . $dIterator->getFilename();?>"/>
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
                 </td>
                 <td>
                     <?php
 
+<<<<<<< HEAD
                     $url = Url::create(['page' => 1, 'path' => $dIterator->getPath() . DIRECTORY_SEPARATOR .  iconv('gbk', 'utf-8', $dIterator->getFileName()) ]);
 
                     if (!$dIterator->isDir()) {
                         $url = Url::create(['type' => 'file', 'path' => $dIterator->getPath() . DIRECTORY_SEPARATOR .  iconv('gbk', 'utf-8', $dIterator->getFileName())]);
+=======
+                    $url = Url::create(['page' => 1, 'path' => $dIterator->getPath() . DIRECTORY_SEPARATOR . $dIterator->getFilename()]);
+
+                    if (!$dIterator->isDir()) {
+                        $url = Url::create(['type' => 'file', 'path' => $dIterator->getPath() . DIRECTORY_SEPARATOR . $dIterator->getFilename()]);
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
                     }
                     ?>
 

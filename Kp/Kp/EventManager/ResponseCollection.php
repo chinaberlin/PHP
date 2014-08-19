@@ -10,5 +10,8 @@ namespace Kp\EventManager;
 
 class ResponseCollection{
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
 }

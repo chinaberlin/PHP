@@ -6,6 +6,14 @@
  * Date: 14-5-23
  * Time: 上午9:41
  */
+<<<<<<< HEAD
+=======
+
+/**
+ * 通过短的文字，例如text，找到相对应的对象，例如Text.php
+ * Class ElementManager
+ */
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
 class ElementManager
 {
 
@@ -15,7 +23,10 @@ class ElementManager
         'email'=>'Element/Email'
     ];
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
     public function get($name , $autoload = false)
     {
         $className = ucfirst($name);

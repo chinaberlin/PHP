@@ -10,7 +10,10 @@ namespace Kp;
 
 use \RecursiveDirectoryIterator;
 use \RecursiveIteratorIterator;
+<<<<<<< HEAD
 use \FilesystemIterator;
+=======
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
 
 class Directory
 {
@@ -19,6 +22,7 @@ class Directory
     {
 
     }
+<<<<<<< HEAD
 
     public static function recursiveRmDir($dir)
     {
@@ -34,4 +38,6 @@ class Directory
 
         rmdir($dir);
     }
+=======
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
 }

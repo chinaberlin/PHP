@@ -5,6 +5,7 @@ class UserController extends AdminController
 {
     public function index()
     {
+<<<<<<< HEAD
 
 
         $model = D('User');
@@ -13,6 +14,8 @@ class UserController extends AdminController
         echo $model->getLastSql();
         var_dump($data);exit;
 
+=======
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
         /* @var $model \Think\Model */
         $model = M('kp-cms-user');
         $users = $model->order('id desc')->page(I('get.p', 0) . ',1')->select();

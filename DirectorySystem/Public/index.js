@@ -6,7 +6,11 @@ $(function () {
             $('.kp-nav button').removeAttr('disabled');
         } else {
             $('tr input[type="checkbox"]').prop("checked", false);
+<<<<<<< HEAD
             $('.kp-nav button').attr('disabled', true);
+=======
+            $('.kp-nav button').attr('disabled',true);
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
         }
     });
 
@@ -22,6 +26,7 @@ $(function () {
             $('th input[type="checkbox"]').prop('checked', false);
         }
 
+<<<<<<< HEAD
         if (checkedCount > 0) {
             $('.kp-nav button').removeAttr('disabled');
         } else {
@@ -75,6 +80,22 @@ $(function () {
         })
         $('.directoryList li').css({background:''});
         $(this).css({background:'red'})
+=======
+        if(checkedCount > 0){
+            $('.kp-nav button').removeAttr('disabled');
+        }else{
+            $('.kp-nav button').attr('disabled',true);
+        }
+    });
+
+    $('.kp-nav .delete').on('click',function(){
+        var path = [];
+        $('td input[type="checkbox"]:checked').each(function(){
+            path.push($(this).attr('data-path'));
+        });
+
+        location.href = 'action.php?action=delete&path='+ path.join('||');
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
     })
 
 });

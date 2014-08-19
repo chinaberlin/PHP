@@ -9,6 +9,7 @@
 
 namespace Admin\Model;
 
+<<<<<<< HEAD
 use Think\Model\RelationModel;
 
 class UserModel extends RelationModel
@@ -29,6 +30,14 @@ class UserModel extends RelationModel
     ];
 
 
+=======
+use Think\Model;
+
+class UserModel extends Model
+{
+    protected $tableName = 'kp-cms-user';
+
+>>>>>>> 553b918ce08d125f4aba6e50ae3722c81771358b
     protected $_map = [
         '_username' => 'username',
         '_password' => 'password',
