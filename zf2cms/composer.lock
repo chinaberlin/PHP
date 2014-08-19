@@ -1,0 +1,57 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "ed3f61bd34d5610f65d779b1006c4be5",
+    "packages": [
+        {
+            "name": "kp/kp-cms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/h112367/KpCMS.git",
+                "reference": "0e692a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/h112367/KpCMS/zipball/62afc6bbad400e4a4a3bc17264218d35c171a0ab",
+                "reference": "0e692a4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23"
+            },
+            "type": "library",
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "Apache2.0"
+            ],
+            "authors": [
+                {
+                    "name": "kittencup",
+                    "email": "112367@qq.com"
+                }
+            ],
+            "description": "zend framework 2 cms",
+            "time": "2014-06-23 07:41:42"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "kp/kp-cms": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

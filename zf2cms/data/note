@@ -1,0 +1,20 @@
+1 . 入口文件 index.php
+
+2 . 加载每个模块 => Module.php => getConfig => 合并所有模块的config => 放到名为Config的服务
+							   => getAutoloader => 设置当前模块的自动加载规则
+							   => 当加载到KpCMS模块时，会执行onBootstrap，会监听上2个集合事件
+							   	  	-KpCMS\Listener\Paginator 在EVENT_DISPATCH会被触发，设置全局的分页每页显示条数，分页的样式，分页前端后端的模板
+							   	  	-KpCMS\Listener\Layout 设置前端后端的layout模板
+							@a@ => 当加载到KpCMSArticle模块时，会执行onBootstrap，会监听上一个集合事件
+							   		-KpCMSArticle\Listener\Admin\Article 主要监听处理Article后台的控制器事件
+
+3 . route => 匹配我们的路由，产生RouteMatch
+
+4 . dispatch => 通过路由找到我们的Controller , 通过ControllerManager 加载controller,
+	dispatch => 通过路由执行controller 里面的 action => 会触发系列的事件(KpCMS\Event\Admin) => 触发到@a@所监听的对应事件
+
+5 . 渲染我们action返回的viewmodel => 渲染指定的 patinator => 渲染指定的layout => 渲染指定的navigation
+
+6 . 返回响应
+
+
