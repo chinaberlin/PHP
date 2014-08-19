@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<categories>
+  <category>
+    <name>blog</name>
+    <id>1</id>
+  </category>
+  <category>
+    <name>php</name>
+    <id>2</id>
+  </category>
+</categories>

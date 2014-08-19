@@ -1,0 +1,43 @@
+<a href="<?= $this->url('kp-blog-admin', ['controller' => 'posts', 'action' => 'add']); ?>"
+   class="btn btn-primary">Add</a>
+<a disabled href="<?= $this->url('kp-blog-admin', ['controller' => 'posts', 'action' => 'delete']); ?>"
+   class="btn btn-danger delete-all">delete</a>
+<table class="table">
+    <thead>
+    <tr>
+        <th><input name="delete-all" type="checkbox"></th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Addtime</th>
+        <th>Status</th>
+        <th>Type</th>
+        <th>Operating</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($this->postsPaginator as $postsEntity): ?>
+        <tr>
+            <td><input name="delete-all" type="checkbox" value="<?= $postsEntity->getId(); ?>"></td>
+            <td><?= $postsEntity->getId(); ?></td>
+            <td><?= $postsEntity->getTitle(); ?></td>
+            <td><?= $postsEntity->getAddtime(); ?></td>
+            <td><?= $postsEntity->getStatus(); ?></td>
+            <td><?= $postsEntity->getType(); ?></td>
+            <td>
+                <a href="<?= $this->url('kp-blog-admin', ['controller' => 'posts', 'action' => 'delete']); ?>"
+                   class="btn btn-danger">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </a>
+                <a href="<?= $this->url('kp-blog-admin', ['controller' => 'posts', 'action' => 'edit', 'id' => $postsEntity->getId()]); ?>"
+                   class="btn btn-info">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+
+<div class="col-sm-12 text-center">
+    <?= $this->paginationControl($this->postsPaginator); ?>
+</div>

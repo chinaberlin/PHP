@@ -1,0 +1,9 @@
+<ul class="pagination">
+    <li><a href="<?= $this->url(null, [], ['query' => ['page' => $this->first]], true) ?>">&laquo;</a></li>
+    <?php foreach ($this->pagesInRange as $page): ?>
+        <li class="<?= $page !== $this->current ? : 'active'; ?>">
+            <a href="<?= $this->url(null, [], ['query' => ['page' => $page]], true) ?>"><?= $page ?></a>
+        </li>
+    <?php endforeach; ?>
+    <li><a href="<?= $this->url(null, [], ['query' => ['page' => $this->last]], true) ?>">&raquo;</a></li>
+</ul>

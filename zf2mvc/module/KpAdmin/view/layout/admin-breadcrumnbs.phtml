@@ -1,0 +1,9 @@
+<ol class="breadcrumb">
+    <?php foreach($pages as $page):?>
+        <?php if($page->isActive()):?>
+            <li class="active"><?=$page->getLabel();?></li>
+        <?php else:?>
+            <li><a href="<?=$page->getHref();?>"><?=$page->getLabel();?></a></li>
+        <?php endif;?>
+    <?php endforeach;?>
+</ol>

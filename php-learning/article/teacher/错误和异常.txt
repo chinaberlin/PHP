@@ -1,0 +1,68 @@
+<textarea kp-markdown>
+
+# 常见错误
+
+> * 分号未加<p>Parse error: parse error, expecting ','' or ';</p>
+> * 实现接口的类所有方法都必须和接口规定的一致：作用域声明、方法名、参数数量 <p>Fatal error: Declaration of XXXXXX must be compatible with that of XXXXXX</p>
+> * 当一个变量已设为非数组类型的时候，就不能再次使用[]让同名变量增加数据键值 <p>Fatal error:  operator not supported for strings in</p>
+> * 语句是否闭合，是否有命名冲突 <p>syntax error, unexpected T_NAMESPACE, expecting T_STRING in</p>
+> * 内存超过PHP默认设置的128M,可能是程序有无限运行没有结束<p>Allowed memory size of 134217728 bytes exhausted (tried to allocate 6144 bytes) </p>
+> * 没找到属性，可能是对象中的方法，也可能是数组的某个键值 <p>Undefined property: XXXXX in</p>
+> * 函数第一个参数必须是一个数组 <p>array_shift() expects parameter 1 to be array, integer given</p>
+> * 调用一些不存在的类，变量 函数 <p>Fatal error: Call to undefined function</p>
+
+# 错误报告级别
+> * E\_ALL  2047  包括除E_STRICT错误级别处所有的错误
+> * E\_COMPILE\_ERROR 64  编译时发生的错误，相当于E\_ERROR，只不过发生在Zend引擎
+> * E\_COMPILE\_WARNING 128  非致命的Zend引擎错误
+> * E\_CORE\_ERROR 16  致命php内核错误，相当于E\_ERROR,只不过发生在PHP内核
+> * E\_CORE\_WARNING 32  非致命的PHP内核错误，相当于E_WARNING,只不过发生在PHP内核
+> * E\_ERROR  1  运行是的致命错误，表示PHP无法从中恢复,通常发生在操作系统级别上例如分配内存时发生的错误
+> * E\_NOTICE 8  表示脚本可能存在潜在的错误，如访问未定义的变量和数组索引
+> * E\_PARSE  4  编译时的发生的语法错误
+> * E\_STRICT 为了让PHP4到PHP5迁移更加容易，如果使用已经废弃的函数或语法，
+> * E\_USER\_ERROR 256  相当于E\_ERROR,发生在函数trigger\_error()设置的错误处理中
+> * E\_USER\_NOTICE 1024  相当于E\_NOTICE，发生在函数trigger\_error()设置的错误处理中
+> * E\_USER\_WARNING  512  相当于E\_WARNING,发生在函数trigger\_error()设置的错误处理中
+> * E\_WARNING 2  警告表示非致命错误，PHP还可以从中恢复，通常被保留为环境错误，如无法执行脚本访问数据库
+
+# 开发阶段和上线阶段
+> 开发阶段推荐使用 error\_reporting = E_ALL
+> 上线阶段可以使用 error\_reporting(0);
+
+# 显示错误
+> ini_set('display\_errors','1');
+> 关闭显示错误时，当php程序运行发生错误，可能产生一个Http 500响应码
+
+# 异常处理
+> PHP5添加了类似于其它语言的异常处理模块。
+
+> 1. PHP代码中所产生的异常可被throw语句抛出，并被catch语句捕获
+> 2. 需要进行异常处理的代码都必须放入 try 代码块内
+> 3. 每一个 try 至少要有一个与之对应的 catch
+> 4. 使用多个 catch 可以捕获不同的类所产生的异常
+> 5. 当try代码块不再抛出异常或者找不到catch能匹配所抛出的异常时，PHP代码就会在跳转到最后一个catch的后面继续执行
+> 6. 允许在 catch 代码块内再次抛出（throw）异常
+
+# Exception 类方法
+
+> * Exception::__construct — 异常构造函数
+> * Exception::getMessage — 获取异常消息内容
+> * Exception::getPrevious — 返回异常链中的前一个异常
+> * Exception::getCode — 获取异常代码
+> * Exception::getFile — 获取发生异常的程序文件名称
+> * Exception::getLine — 获取发生异常的代码在文件中的行号
+> * Exception::getTrace — 获取异常追踪信息
+> * Exception::getTraceAsString — 获取字符串类型的异常追踪信息
+> * Exception::__toString — 将异常对象转换为字符串
+> * Exception::__clone — 异常克隆
+
+# 函数异常转换
+
+> 只有面向对象的扩展才使用异常， 而PHP内部函数主要使用的是错误报告, 但错误可以很容易的通过ErrorException转换为异常。
+> set_error_handler() 自定义函数异常处理
+
+# 自定义异常处理
+> 可以自定义异常处理，继承exception类，来自定义异常方法
+
+</textarea>

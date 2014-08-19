@@ -1,0 +1,106 @@
+<textarea kp-markdown>
+
+# 迭代器(Iterator)模式
+
+### GOF的定义
+迭代器（Iterator）模式，又叫做游标（Cursor）模式
+定义： 提供一种方法访问一个容器（container）对象中各个元素，而又不需暴露该对象的内部细节。
+
+### 迭代器(Iterator)模式结构图
+
+> ![](./demo/设计模式/iterator.png)
+
+> 迭代器角色（Iterator）：迭代器角色负责定义访问和遍历元素的接口。
+
+> 具体迭代器角色（Concrete Iterator）：具体迭代器角色要实现迭代器接口，并要记录遍历中的当前位置。
+
+> 容器角色（Container）：容器角色负责提供创建具体迭代器角色的接口。
+
+> 具体容器角色（Concrete Container）：具体容器角色实现创建具体迭代器角色的接口——这个具体迭代器角色于该容器的结构相关。
+
+### 迭代器角色（Iterator）
+
+> PHP 5.3开始，PHP提供了内置Iterator接口
+
+> ![](./demo/设计模式/iterator-role.png)
+
+### Traversable
+
+> Traversable接口只是为了标识对象是否可以通过foreach迭代，不包含任何方法，无法被单独实现的基本抽象接口。
+
+> 必须由IteratorAggregate 或 Iterator 接口实现。
+
+### foreach
+> 在php中foreach操作就是在使用迭代器，迭代器并不等于迭代器模式
+
+> 对于对象的迭代，PHP源码中foreach处理对象分别分为ZEND\_ITER\_OBJECT、ZEND\_ITER\_PLAIN\_OBJECT
+
+> 实现了Iterator接口，对象则为ZEND\_ITER\_OBJECT
+
+> ZEND\_ITER\_PLAIN\_OBJECT foreach会获取该对象的默认属性数组,然后进行foreach
+
+> ZEND\_ITER\_OBJECT foreach会通过调用对象实现的Iterator接口相关函数来进行foreach
+
+### Iterator执行过程
+> 1. rewind
+> 2. valid
+> 3. current
+> 4. key
+> 5. next
+> 6. goto 2
+
+### 容器角色（Container）
+
+> PHP提供了 IteratorAggregate 创建外部迭代器的接口
+
+> ![](./demo/设计模式/iterator-container.png)
+
+
+# 观察者(Observer)模式
+
+### GOF的定义
+观察者(Observer)模式，又称为发布-订阅（Publish-Subscribe）模式
+定义了对象之间的一对多依赖，这样一来，当一个对象改变状态时，它的所有依赖者都会收到通知并自动更新。
+
+### 观察者(Observer)模式结构图
+
+> ![](./demo/设计模式/observer.png)
+
+> 抽象主题（Subject）角色：主题角色将所有对观察者对象的引用保存在一个集合中，每个主题可以有任意多个观察者。抽象主题提供了增加和删除观察者对象的接口。
+
+> 抽象观察者（Observer）角色：为所有的具体观察者定义一个接口，在观察的主题发生改变时更新自己。
+
+> 具体主题（ConcreteSubject）角色：存储相关状态到具体观察者对象，当具体主题的内部状态改变时，给所有登记过的观察者发出通知。具体主题角色通常用一个具体子类实现。
+
+> 具体观察者（ConcretedObserver）角色：存储一个具体主题对象，存储相关状态，实现抽象观察者角色所要求的更新接口，以使得其自身状态和主题的状态保持一致。
+
+> ### 抽象主题角色（Subject）
+
+> PHP5.0后 Standard Php Library 有提供一个 SplSubject 接口
+
+> ### 抽象观察者角色（SplObserver）
+
+> PHP5.0后 Standard Php Library 有提供一个 SplObserver 接口
+
+# 适配器(Adapter)模式
+
+### GOF的定义
+将一个类的接口适配成用户所期待的接口。 它可以让因为接口不能兼容的类可以一起工作，可划分为类适配器模式和对象适配器模式。
+
+### 类适配器模式(Class Adapter)模式结构图
+
+> ![](./demo/设计模式/adapter-class.gif)
+
+### 对象适配器模式(Object Adapter)模式结构图
+
+> ![](./demo/设计模式/adapter-object.gif)
+
+> 目标角色（Target）：— 定义Client使用的与特定领域相关的接口。
+
+> 客户角色（Client）：与符合Target接口的对象协同。
+
+> 被适配橘色（Adaptee)：定义一个已经存在并已经使用的接口，这个接口需要适配。
+
+> 适配器角色（Adapte) ：适配器模式的核心。它将对被适配Adaptee角色已有的接口转换为目标角色Target匹配的接口。对Adaptee的接口与Target接口进行适配.
+
+</textarea>

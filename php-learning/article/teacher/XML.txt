@@ -1,0 +1,309 @@
+<textarea kp-markdown>
+
+# XML简介
+> XML 指可扩展标记语言
+
+> XML 是一种标记语言，很类似 HTML
+
+> XML 的设计宗旨是传输数据，而非显示数据
+
+> XML 标签没有被预定义。您需要自行定义标签。
+
+> XML 被设计为具有自我描述性。
+
+> XML 是 W3C 的推荐标准
+
+# XML用途
+
+> XML 把数据从 HTML 分离
+
+> XML 简化数据共享，传输
+
+# XML树结构
+> XML 文档形成了一种树结构，它从“根部”开始，然后扩展到“枝叶”。
+
+# XML语法
+> 所有 XML 元素都须有关闭标签
+
+> XML 标签对大小写敏感
+
+> XML 必须正确地嵌套
+
+> XML 文档必须有根元素
+
+> XML 的属性值须加引号
+
+# XML属性
+> 属性类似于HTML的属性定义规则
+
+> `<user city="北京"></user>`
+
+# XML属性问题
+> 属性无法包含多重的值（元素可以）
+
+> 属性无法描述树结构（元素可以）
+
+> 属性不易扩展（为未来的变化）
+
+> 属性难以阅读 维护
+
+> 请尽量使用元素来描述数据。而仅仅使用属性来提供与数据无关的信息。
+
+# DOM扩展
+>「DOM」（Document Object Model）文档模型可以将XML文件转换成一棵节点（Nodes）组成的树状结构，提供节点的相关属性和方法，存取元素内容，或新增、删除和修改节点内容。
+DOM是W3C的建议规范，提供各种程序语言标准程序设计界面的属性、方法和组建，程序设计者能够透过DOM浏览XML文件、新增、删除和修改节点资料。
+
+# DOM接口
+> PHP程序在使用XML解析器载入XML文件后，就可以使用DOM接口（Interface）处理XML文件的元素和属性，将XML文件内容视为树状结构的节点。
+
+> DOMDocument	代表一份XML文件的树状结构
+
+> DOMNode	节点对象
+
+> DOMNodeList	包含此节点之所有子节点的对象
+
+> DOMNameNodeMap	包含此节点之所有DOMAttr对象
+
+> DOMElement	XML元素对象
+
+> DOMText	文本元素对象
+
+> DOMAttr	属性元素对象
+
+# DOM节点类型
+> XML_DOCUMENT_TYPE_NODE_XML_PI_NODE	DTD节点
+
+> XML_PI_NODE	<?xml ?>节点
+
+> XML_ELEMENT_NODE	元素节点
+
+> XML_ATTRIBUTE_NODE	属性节点
+
+> XML_TEXT_NODE	文本节点
+
+# DOMDocument 对象解析过程
+> 1. DOMDocument对象方法
+> 2. load() 读取一个xml文件
+> 3. getElementsByTagName(); 获取节点集合
+> 4. 取出的节点集合是DOMNodeList对象。
+> 5. hasAttributes() 判断是否有属性
+> 6. getAttribute()获取属性
+> 7. item() 获取domNodeList里的第n个元素
+> 8. nodeValue 获取节点里的值
+
+# DomNode对象
+> DOMDocument对象是由DOMNode节点对象所组成，在DOMNode提供相关属性和方法可以取得XML元素的名称和内容
+
+> nodeName属性 取得节点名称。
+
+> childNodes属性 取得这些子节点的DOMNodeList对象
+
+> attributes属性 取得这个节点的所有属性
+
+> nodeType属性 取得这个节点的类型
+
+> nodeValue属性 取得这个节点的内容
+
+> textContent属性 取得这个节点下所有的文字节点
+
+# 节点种类
+> XML_ELEMENT_NODE	1	标签名称	NULL
+
+> XML_ATTRIBUTE_NODE	2	属性名称	属性值
+
+> XML_TEXT_NODE	3	#text	节点内容
+
+# DOM关系
+> firstChild	取得第1个子节点
+
+> lastChild	取得最后一个子节点
+
+> nextSibling	取得下一个兄弟节点
+
+> previousSibling	取得前一个兄弟节点
+
+> parentNode	取得父节点
+
+# 新增节点和属性
+> createElement() 建立XML元素节点
+
+> createAttribute()   建立属性名称的属性节点
+
+> createComment()	建立注解文字节点
+
+> createTextNode()	建立文字节点
+
+> appendChild()	插入该节点至最后
+
+> insertBefore()	插在befnode节点前
+
+> setAttribute() 设置属性
+
+> removeChild() 删除节点
+
+> removeAttribute() 删除属性
+
+> saveXML() 返回XML字符串
+
+> save() 保存当前xml
+
+# XPath 介绍
+> XPath（XML Path Language）是一种标示节点位置的语言，可以用来描述XML元素的位置，如同硬盘资料夹的档案路径
+
+> C:\xampp\www\book.xml
+
+> 上述路径指出档案book.xml的位置，XPath指令可以指出XML元素在XML文件中的位置，也就是树状结构的节点位置。
+
+> XPath语言的主要目的是描述节点相对其他节点的位置，可以取得所有符合条件的节点，称为「位置路径」（Location Path）。
+
+# xPath 运算符
+> /	指出元素和子元素节点
+
+> //	指出元素和子元素，孙元素节点
+
+> .	当前节点
+
+> ..	父节点
+
+> *	当前节点的所有元素和属性
+
+> []	节点的索引，内容为制定的属性或节点
+
+> |	组合多个位置路径
+
+# XPATH范例
+> /	根目录
+
+> /users/user/username	users->第一个user->username
+
+> /users//user//username	users->所有user->所有username
+
+> /\*/\*	所有节点
+
+> /users/user/\*	users->第一个user->所有节点
+
+> /users/user/username[@color]	users->第一个user->username->有color属性节点
+
+# XPATH对象
+> PHP程序在载入XML文件建立DOMDocument对象后，就可以建立DOMXPath对象
+
+# SimpleXML
+> SimpleXML扩展提供了一个非常简单和易于使用的工具，以XML转换为一个可与正常的属性选择器和数组迭代处理的对象。
+
+# SimpleXML转换函数
+> simplexml_import_dom 将dom节点转换成simpleXML对象
+
+> simplexml_load_file 将文件转换成simpleXML对象
+
+> simplexml_load_string 将字符串转换成simpleXML对象
+
+# SimpleXmlIterator
+> SimpleXml也提供了对应的迭代器
+
+# XML parse
+> 使用XML文档，就是对其进行必要的处理，以解析其中的数据信息。目前，无论是在服务器端还是在客户端，对XML的解析都有了很好的支持,PHP中提供了XML语法解析函数库，用于XML文档的解析。
+
+> XML语法解析函数库默认为有效的。在Unix系统中， 它们使用了捆绑的expat库，而Windows系统中已经内置了该函数库的支持，无需加载任何附加护展库就可以使用这些函数。
+
+> XML的解析函数使用基于事件的语法分析方式。事件是预定义的，解析器会只针对特定的事件作出响应，从而触发相应的XML处理程序。
+
+# 基于事件方式
+> 在解析时，PHP将XML文档顺序地读入，并以块的方式进行分析。当到达特定位置时，如元素的开始和结束、字符数据或处理指令等，即触发相应的事件。
+程序员可以针对不同的事件编写具体的处理函数。
+
+# 解析过程
+> 1. 打开文档
+> 2. 打开元素的标签: <users>
+> 3. 打开元素的标签: <user>
+> 4. 打开元素的标签: <username>
+> 5. 文字字符串: ‘张三’
+> 6. 关闭元素的标签: </username>
+> 7. 关闭元素的标签: </user>
+> 8. 关闭元素的标签: </users>
+> 9. 关闭文档
+
+# 建立XML解析器
+> PHP解析XML文档的工作原理很简单。首先要建立一个解析器，它是所有工作的核心。解析器将分析XML文档，并在各种事件发生时通知对应的处理函数进行处理。
+
+> $xml_parser = xml_parser_create();
+
+# 设置XML解析器
+> 在使用XML解析器之前，需要对其行为有所了解。
+> > 例如，默认情况下XML文档中的空白字符是有意义的，解析器也会对其处理。在XML文档中的空白中，如制表符等仅是用于控制XML文档内容的缩进格式，如果将这些空白字符也作为元素的内容的话，有可以导致一些不可预见的错误，因此应该忽略这些空白。
+  元素处理函数可能会导致元素名称“大小写折叠”， “大小写折叠”意味着在解析过程中，元素名称中所有的大小写字符串替换成对应的大写字符。 “大小写折叠”是一个XML标准。在实际应用中，这是有好处的，国为程序不必关心XML标签拼写中的大小写问题。而对于一个大小写敏感的系统，这种方法执必引发出一系列问题。因此需要对“大小写折叠”的使用作出选择。
+
+> > 调整XML解析器的行为，通过xml_parser_set_option -- 为指定 XML 解析进行选项设置 .
+
+> > `bool xml_parser_set_option ( resource parser, int option, mixed value )`
+
+# XML解析器常量
+> XML_OPTION_CASE_FOLDING (integer)	控制在该 XML 解析器中 大小写折叠（case-folding） 是否有效。其默认值为有效。
+
+> XML_OPTION_TARGET_ENCODING (integer)	指明在一个标记名前应略过几个字符。
+
+> XML_OPTION_SKIP_TAGSTART (integer)	是否略过由白空字符组成的值。
+
+> XML_OPTION_SKIP_WHITE (integer)	设置解析编码
+
+# 解析文档
+> `xml_parse ( resource parser, string data [, bool is_final] )`
+
+> 当XML文档解析完毕后，需要使用xml_parser_free()函数对解析器指针资源进行释放。
+
+# 解析错误
+> 如果在解析时发生错误，可以使用函数获得错误信息，它们只接受XML解析器的指针作为参数;
+
+> `xml_get_error_code ( resource parser )`  获取 XML 解析器错误代码。
+
+> `xml_get_current_line_number ( resource parser )`  获取指定 XML 解析器当前的行号.
+
+> `xml_get_current_column_number ( resource parser )`  获得指定 XML 解析器当前的列号。
+
+> `xml_get_current_byte_index ( resource parser )`  获取指定的 XML 解析器的当前字节索引.
+
+> 另外函数`xml_error_string ( int code )`获取 XML 解析器的错误字符串参数”code” 由 `xml_get_error_code()` 返回的错误代码。
+
+# XML事件处理函数
+> PHP使用基于事件的解析处理方式，为此，用户需要设计事件处理函数，并把它注册到XML解析器中。当程序读取到特定的XML文本位置时，便触发相应的处理函数进行处理。
+
+> > 在PHP中存在下列事件处理函数：
+> > 1. 元素处理函数：
+> > 2. 字符数据处理函数：
+> > 3. 处理指令处理函数：
+> > 4. 外部实体引用处理函数：
+> > 5. 非可解析实体（NDATA）处理函数：
+> > 6. 注释处理函数：
+> > 7. 默认处理函数：
+
+# 元素处理函数
+> 元素事件（Element Events）将在XML解析器遇到元素的起始标签或者终止标签时发生，并通过元素处理函数进行处理。使用`xml_set_element_handler()`函数注册元素事件的处理函数。
+
+> `xml_set_element_handler ( resource parser, callback start_element_handler, callback end_element_handler ) `
+
+# 字符数据处理函数
+> 字符数据，通常指XML文档中所有标识符以外的内容，包括标识符之间的空格。需要注意的是，XML语法解析器不会加上或者去掉任何空格。空格的取舍将由程序员开发的应用程序来决定。
+
+> `bool xml_set_character_data_handler ( resource parser, callback handler ) `
+
+# 处理指令处理函数
+> 处理指令具有和PHP段落标记相同的格式，例如：”<?target data?>”就是一个处理指令，其中”target”是指令对象。在PHP中，除了以”xml”开关的指令目标已被保留处，对这些处理指令的处理将由应用程序来完成。
+
+> `bool xml_set_processing_instruction_handler ( resource parser, callback handler ) `
+
+# 注释处理函数
+> `bool xml_set_notation_decl_handler ( resource parser, callback handler ) `
+
+# 默认处理函数
+> 所有无法被其他处理函数处理的事件，将由默认处理函数处理。这些事件包括诸如XML和文档类型声明等内容。
+> `bool xml_set_default_handler ( resource parser, callback handler )`
+
+# XML转数组
+> 当XML文档相当复杂时，对应的事件处理函数也会相对复杂。PHP使用`xml_parse_into_struct()`可以将XML数据解析到数组中。
+
+> `int xml_parse_into_struct ( resource parser, string data, array &values [, array &index] ) `
+
+# XMLREADER
+> 你想要解析一个大型XML文档，由于这个大型文档无法全部载入内存中，所以不可能使用SimpleXML或dom
+
+> XMLREADER基于流的解析器，不会一次就把整个文档都加载到内存中，而是每次分别读取其中一个节点并允许你实时地与之交互，而当移向下一个节点时，上一个节点就会被抛弃
+</textarea>

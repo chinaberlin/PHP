@@ -1,0 +1,69 @@
+<textarea kp-markdown>
+
+# 简单调试
+> 简单的程序可以直接通过var\_dump，print\_r，echo 进行调试
+
+# 复杂调试
+> 当我们使用oop进行编码时，类之间依赖关系增多，通过简单调试无法完成我们的调试需求，可通过第3方模块进行调试
+
+# Xdebug
+> 1. 可以对每个变量的状态进行监控
+> 2. 可以进行逐行执行代码
+> 3. 可以打断点执行代码
+
+# 安装Xdebug
+> [下载Xdebug](http://xdebug.org/download.php)
+
+> 根据安装的PHP版本，选择合适的Xdebug版本
+
+> 也可以将php.ini内容复制到 [该网址文本框内](http://xdebug.org/wizard.php) 自动识别Xdebug版本
+
+> 将下载的dll文件复制到PHP安装目录下的ext目录
+
+# 配置xdebug
+
+> 添加至php.ini文件最后
+
+>         [Xdebug]
+>         zend_extension="c:/php/ext/php_xdebug-2.1.0-5.3-vc6.dll"
+>         ;开启对函数调用的监测信息用文件格式输出
+>         xdebug.auto_trace=1
+>         ;监测函数调用的参数
+>         xdebug.collect_params=1
+>         ;监测函数的返回值
+>         xdebug.collect_return=1
+>         ;检测调用的输出信息保存在
+>         xdebug.trace_output_dir="D:/PHPWeb/xdebug/trace"
+>         ;开启效能检测
+>         xdebug.profiler_enable=1;
+>         ;性能信息保存在
+>         xdebug.profiler_output_dir="D:/PHPWeb/xdebug/profiler"
+
+# Zend Studio + Xdebug调试
+
+> 对php.ini进行设置
+
+>       ;Xdebug允许远程IDE连接
+>       xdebug.remote_enable=true
+>       ;允许连接的zend studio的IP地址
+>       xdebug.remote_host=127.0.0.1
+>       ;反向连接zend studio使用的端口
+>       xdebug.remote_port=9000
+>       ;用于zend studio远程调试的应用层通信协议
+>       xdebug.remote_handler=dbgp
+
+# Zend Studio Xdebug 配置
+
+> ![](./demo/调试/demo001.png)
+
+# Whoops
+> Whoops是一个使错误处理和调试更容易的PHP库。
+> 这个库提供基于堆栈的错误处理，并且有一个好看的界面。它有一个处理异常的简单API，能够跟踪帧及它们的数据，并可以与任何框架整合。
+
+> [Github](https://github.com/h112367/whoops)
+
+>     $whoops = new \Whoops\Run;
+>     $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+>     $whoops->register();
+
+</textarea>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users>
+    <user>
+        <username city="上海">张三</username>
+        <age>20</age>
+        <city>上海</city>
+    </user>
+
+    <user>
+        <username>李四</username>
+        <age>30</age>
+        <city>北京</city>
+        <regDate>
+            <Year>
+                2012
+            </Year>
+            <month>
+                12
+            </month>
+            <day>
+                01
+            </day>
+        </regDate>
+    </user>
+</users>

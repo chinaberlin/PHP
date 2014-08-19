@@ -1,0 +1,1 @@
+CREATE TABLE `kp_blog_posts_tag` (`posts_id` int NULL,`tag_id` int NULL);

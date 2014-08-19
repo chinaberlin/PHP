@@ -1,0 +1,46 @@
+<?= $this->doctype(); ?>
+<html>
+<head>
+    <?= $this->headMeta()->setCharset('UTF-8'); ?>
+    <?=
+    $this->HeadLink()
+        ->appendStylesheet($this->kpCdn() . '/vendor/bootstrap3/css/bootstrap.min.css'); ?>
+
+    <?=
+    $this->HeadScript()
+        ->appendFile($this->kpCdn() .'/vendor/jquery/jquery/jquery.min.js')
+        ->appendFile($this->kpCdn() .'/vendor/bootstrap3/js/bootstrap.min.js');
+    ?>
+</head>
+
+        <body>
+
+        <div class="container">
+
+            <div class="col-sm-12">
+        <?=
+            $this->navigation()
+            ->menu()
+            ->renderPartial('kp-admin-navigation','kp-admin-navigation');
+        ?>
+    </div>
+
+    <div class="col-sm-12">
+        <?=$this->navigation()
+            ->breadcrumbs()
+            ->renderPartial('kp-admin-navigation','kp-admin-breadcrumnbs');?>
+
+        <?= $this->content; ?>
+    </div>
+
+
+</div>
+
+
+
+
+        <?=$this->inlineScript()->appendFile($this->kpCdn().'/js/admin/admin.js');?>
+
+</body>
+
+</html>

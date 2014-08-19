@@ -1,0 +1,1 @@
+CREATE TABLE `kp_blog_category` (`id` int NULL AUTO_INCREMENT,`name` varchar(50) NULL,`path` varchar(255) NULL,`depth` int NULL,PRIMARY KEY (`id`) );

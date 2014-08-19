@@ -1,0 +1,96 @@
+<style>
+    .btn-default{
+        margin:5px 10px;
+    }
+</style>
+<div class="col-sm-12">
+    <div class="col-sm-12">
+        <div class="col-sm-1">
+            <a href="{{:U('index',array_merge(I('get.'),['yx'=>'']))}}" class="<if condition="!I('get.yx')">active</if> btn btn-default">全部月薪</a>
+        </div>
+        <div class="col-sm-11">
+            <foreach name="yxSelect" item="name">
+                <a href="{{:U('index',array_merge(I('get.'),['yx'=>$name]))}}" class="<if condition="I('get.yx') === $name">active</if> btn btn-default">{{$name}}</a>
+            </foreach>
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+    <div class="col-sm-1">
+            <a href="" class="btn btn-default">全部经验</a>
+        </div>
+        <div class="col-sm-11">
+            <foreach name="jySelect" item="jy">
+                <a href="{{:U('index',array_merge(I('get.'),['jy'=>$jy['name']]))}}" class="<if condition="I('get.jy') === $jy['name']">active</if> btn btn-default">{{$jy.name}}</a>
+            </foreach>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="col-sm-1">
+            <a href="" class="btn btn-default">全部地点</a>
+        </div>
+        <div class="col-sm-11">
+            <foreach name="ddSelect" item="dd">
+                <a href="{{:U('index',array_merge(I('get.'),['dd'=>$dd['name']]))}}" class="<if condition="I('get.dd') === $dd['name']">active</if> btn btn-default">{{$dd.name}}</a>
+            </foreach>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="col-sm-1">
+            <a href="" class="btn btn-default">全部学历</a>
+        </div>
+        <div class="col-sm-11">
+            <foreach name="xlSelect" item="xl">
+                <a href="{{:U('index',array_merge(I('get.'),['xl'=>$xl['name']]))}}" class="<if condition="I('get.xl') === $xl['name']">active</if> btn btn-default">{{$xl.name}}</a>
+            </foreach>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="col-sm-1">
+            <a href="" class="btn btn-default">全部性质</a>
+        </div>
+        <div class="col-sm-11">
+            <foreach name="xzSelect" item="xz">
+                <a href="{{:U('index',array_merge(I('get.'),['xz'=>$xz['name']]))}}" class="<if condition="I('get.xz') === $xz['name']">active</if> btn btn-default">{{$xz.name}}</a>
+            </foreach>
+        </div>
+    </div>
+    <!--<div class="col-sm-12">-->
+        <!--<div class="col-sm-1">-->
+            <!--<a href="" class="btn btn-default">全部公司</a>-->
+        <!--</div>-->
+        <!--<div class="col-sm-11">-->
+            <!--<foreach name="gsSelect" item="gs">-->
+                <!--<a href="" class="btn btn-default">{{$gs.name}}</a>-->
+            <!--</foreach>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+
+
+<table class="table">
+
+    <tr>
+        <th>编号</th>
+        <th>标题</th>
+        <th>地点</th>
+        <th>经验</th>
+        <th>学历</th>
+        <th>公司</th>
+        <th>性质</th>
+        <th>月薪</th>
+    </tr>
+
+    <foreach name="data" item="zp">
+    <tr>
+        <td>{{$zp.id}}</td>
+        <td>{{$zp.title}}</td>
+        <td>{{$zp.dd.name}}</td>
+        <td>{{$zp.jy.name}}</td>
+        <td>{{$zp.xl.name}}</td>
+        <td>{{$zp.gs.name}}</td>
+        <td>{{$zp.xz.name}}</td>
+        <td>{{$zp.yx.l}}k - {{$zp.yx.h}}k</td>
+    </tr>
+    </foreach>
+</table>

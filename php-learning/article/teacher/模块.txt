@@ -1,0 +1,9 @@
+<textarea kp-markdown>
+
+# EventManger
+> ![](./demo/模块/eventManager.png)
+
+# Paginator
+> ![](./demo/模块/paginator.png)
+
+</textarea>
